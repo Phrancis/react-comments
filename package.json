@@ -1,7 +1,7 @@
 {
   "name": "react-hello-world",
   "version": "1.0.0",
-  "description": "",
+  "description": "A minimal, working configuration that compiles static assets to ./src/client/public/bundle.js",
   "main": "src/client/app/index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,9 +9,10 @@
   },
   "author": "Francis Veilleux-Gaboury",
   "license": "WTFPL",
+  "repository": "https://github.com/Phrancis/react-hello-world.git",
   "dependencies": {
     "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "devDependencies": {
     "babel-core": "^6.17.0",
