@@ -1,6 +1,8 @@
-# `react-hello-world`
+# `react-comments`
 
-A minimal, working configuration that compiles static assets to `./src/client/public/bundle.js`.
+My implementation of the tutorial found at https://facebook.github.io/react/docs/tutorial.html
+
+To explore the code, start at `src/client/app/index.jsx` and work your way from there.
 
 ##Directions
 
@@ -16,4 +18,5 @@ A minimal, working configuration that compiles static assets to `./src/client/pu
 
 5. Open `src/client/index.html` in a web browser.
 
-6. The browser should display a page that says "Hello React!". If it does, then the configuration works and you are ready to add your own code!
+---
+
