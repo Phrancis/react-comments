@@ -2,9 +2,9 @@ import React from 'react'
 
 const Comment = (props) => (
   <div className="comment">
-    <h2 className="commentAuthor">
+    <h4 className="commentAuthor">
       {props.author}
-    </h2>
+    </h4>
     <span>
       {props.children}
     </span>
@@ -17,7 +17,7 @@ Comment.defaultProps = {
 }
 
 Comment.propTypes = {
-  author: React.PropTypes.string.isRequired,
+  author:   React.PropTypes.string.isRequired,
   children: React.PropTypes.any.isRequired
 }
 

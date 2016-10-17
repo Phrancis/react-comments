@@ -5,6 +5,10 @@ class CommentFormContainer extends React.Component {
 
   constructor(props) {
     super(props)
+    this.state = {
+      author: '',
+      text: ''
+    }
   }
 
   render() {
