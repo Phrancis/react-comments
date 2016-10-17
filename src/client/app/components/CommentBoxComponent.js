@@ -4,7 +4,7 @@ import CommentForm from '../containers/CommentForm'
 
 const CommentBoxComponent = (props) => (
   <div className="commentBox">
-    Hello, world! I am a <code>CommentBox</code>.
+    <h1>Comments</h1>
     <CommentList/>
     <CommentForm/>
   </div>
