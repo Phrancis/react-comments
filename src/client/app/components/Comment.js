@@ -1,6 +1,6 @@
 import React from 'react'
 
-const CommentComponent = (props) => (
+const Comment = (props) => (
   <div className="comment">
     <h2 className="commentAuthor">
       {props.author}
@@ -11,14 +11,14 @@ const CommentComponent = (props) => (
   </div>
 )
 
-CommentComponent.defaultProps = {
+Comment.defaultProps = {
   author: "Anonymous",
   children: <em>(empty)</em>
 }
 
-CommentComponent.propTypes = {
+Comment.propTypes = {
   author: React.PropTypes.string.isRequired,
   children: React.PropTypes.any.isRequired
 }
 
-export default CommentComponent
+export default Comment

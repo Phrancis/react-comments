@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import CommentBox from './containers/CommentBox'
+import CommentBox from './containers/CommentBoxContainer'
 
 class App extends React.Component {
   render() {
