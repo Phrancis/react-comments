@@ -1,5 +1,6 @@
 import React from 'react'
 import CommentList from '../components/CommentList'
+import comments from '../data/comments'
 
 class CommentListContainer extends React.Component {
 
@@ -9,7 +10,7 @@ class CommentListContainer extends React.Component {
 
   render() {
     return (
-      <CommentList/>
+      <CommentList data={comments}/>
     )
   }
 }
