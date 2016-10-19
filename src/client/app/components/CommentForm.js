@@ -1,6 +1,5 @@
 import React from 'react'
 
-// TODO add character count functionality
 const CommentForm = (props) => (
   <form className="commentForm">
     <h2>Post a comment:</h2>
@@ -19,11 +18,13 @@ const CommentForm = (props) => (
       <br />
       <textarea
         placeholder="What's on your mind?"
+        name="comment"
         value={props.comment}
         onChange={props.onCommentChange}
       />
     </div>
-    <button type="submit" >Post</button>
+    <button type="submit">Post</button>
+    <p>Chars: {props.charsLeft}/{props.maxChars}</p>
   </form>
 )
 CommentForm.defaultProps = {
