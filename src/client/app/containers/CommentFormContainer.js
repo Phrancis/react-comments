@@ -14,7 +14,7 @@ class CommentFormContainer extends React.Component {
     }
     this.handleAuthorChange = this.handleAuthorChange.bind(this)
     this.handleCommentChange = this.handleCommentChange.bind(this)
-    this.updateCharsLeft = this.updateCharsLeft.bind(this)
+    //this.updateCharsLeft = this.updateCharsLeft.bind(this)
   }
 
   handleAuthorChange(event) {
@@ -25,15 +25,11 @@ class CommentFormContainer extends React.Component {
     var input = event.target.value
     var length = input.length
     if (length <= MAX_CHARS) {
-      this.updateCharsLeft(length)
       this.setState({
-        comment: event.target.value
+        comment: event.target.value,
+        charsLeft: MAX_CHARS - length
       })
     }
-  }
-
-  updateCharsLeft(length) {
-    this.setState({ charsLeft: MAX_CHARS - length })
   }
 
   render() {
