@@ -1,4 +1,5 @@
 import React from 'react'
+import TextInputField from '../components/TextInputField'
 
 class TextInputFieldContainer extends React.Component {
   constructor(props) {
@@ -7,15 +8,15 @@ class TextInputFieldContainer extends React.Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(e) {
-    this.setState({ text: e.target.value })
+  handleChange(event) {
+    this.setState({ text: event.target.value })
   }
 
   render() {
     return (
-      <input
-        placeholder={this.props.placeholder}
+      <TextInputField
         value={this.state.text}
+        placeholder={this.props.placeholder}
         onChange={this.handleChange}
       />
     )
