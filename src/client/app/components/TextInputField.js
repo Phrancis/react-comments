@@ -9,4 +9,14 @@ const TextInputField = (props) => (
   />
 )
 
+TextInputField.defaultProps = {
+  placeholder: '',
+  text: ''
+}
+TextInputField.propTypes = {
+  placeholder: React.PropTypes.string.isRequired,
+  text: React.PropTypes.string.isRequired,
+  onChange: React.PropTypes.func.isRequired
+}
+
 export default TextInputField
