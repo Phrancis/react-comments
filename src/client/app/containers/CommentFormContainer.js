@@ -14,6 +14,7 @@ class CommentFormContainer extends React.Component {
     }
     this.handleAuthorChange = this.handleAuthorChange.bind(this)
     this.handleCommentChange = this.handleCommentChange.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleAuthorChange(event) {
@@ -25,10 +26,24 @@ class CommentFormContainer extends React.Component {
     var length = input.length
     if (length <= CHARACTER_LIMIT) {
       this.setState({
-        comment: event.target.value,
+        comment: input,
         charsLeft: CHARACTER_LIMIT - length
       })
     }
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    var author = this.state.author
+    var comment = this.state.comment
+    if (!author || !comment) {
+      return
+    }
+    // TODO send request to be saved
+    this.setState({
+      author: '',
+      comment: ''
+    })
   }
 
   render() {
@@ -40,6 +55,7 @@ class CommentFormContainer extends React.Component {
         charLimit={CHARACTER_LIMIT}
         onAuthorChange={this.handleAuthorChange}
         onCommentChange={this.handleCommentChange}
+        onSubmit={this.handleSubmit}
       />
     )
   }

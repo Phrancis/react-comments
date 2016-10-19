@@ -1,7 +1,7 @@
 import React from 'react'
 
 const CommentForm = (props) => (
-  <form className="commentForm">
+  <form className="commentForm" onSubmit={props.onSubmit}>
     <h2>Post a comment:</h2>
     <div>
       <label htmlFor="author">Name: </label>
