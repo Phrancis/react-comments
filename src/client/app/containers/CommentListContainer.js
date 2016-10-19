@@ -14,17 +14,21 @@ class CommentListContainer extends React.Component {
   }
 
   loadComments() {
-
+    // TODO get data with polling
   }
 
   componentDidMount() {
-    this.setState({data: comments})
+    if (comments) {
+      this.setState({data: comments})
+    }
   }
 
   render() {
-    return (
-      <CommentList data={this.state.data}/>
-    )
+    if (this.state.data !== []) {
+      return (
+        <CommentList data={this.state.data}/>
+      )
+    }
   }
 }
 

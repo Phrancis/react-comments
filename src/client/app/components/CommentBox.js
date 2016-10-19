@@ -1,12 +1,12 @@
 import React from 'react'
-import CommentList from '../containers/CommentListContainer'
-import CommentForm from '../containers/CommentFormContainer'
+import CommentListContainer from '../containers/CommentListContainer'
+import CommentFormContainer from '../containers/CommentFormContainer'
 
 const CommentBox = (props) => (
   <div className="commentBox">
     <h1>Comments</h1>
-    <CommentList/>
-    <CommentForm/>
+    <CommentListContainer data={props.data}/>
+    <CommentFormContainer />
   </div>
 )
 
