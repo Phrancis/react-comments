@@ -24,16 +24,19 @@ const CommentForm = (props) => (
       />
     </div>
     <button type="submit">Post</button>
-    <p>Chars: {props.charsLeft}/{props.maxChars}</p>
+    <p>Chars: {props.charsLeft}/{props.charLimit}</p>
   </form>
 )
 CommentForm.defaultProps = {
   author: '',
-  comment: ''
+  comment: '',
+  charsLeft: 0,
+  charLimit: 0
 }
 CommentForm.propTypes = {
   author: React.PropTypes.string.isRequired,
   comment: React.PropTypes.string.isRequired,
+  charsLeft: React.PropTypes.number.isRequired,
   onAuthorChange: React.PropTypes.func.isRequired,
   onCommentChange: React.PropTypes.func.isRequired
 }

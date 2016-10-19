@@ -1,7 +1,7 @@
 import React from 'react'
 import CommentForm from '../components/CommentForm'
 
-const MAX_CHARS = 200
+const CHARACTER_LIMIT = 200
 
 class CommentFormContainer extends React.Component {
 
@@ -10,11 +10,10 @@ class CommentFormContainer extends React.Component {
     this.state = {
       author: '',
       comment: '',
-      charsLeft: MAX_CHARS
+      charsLeft: CHARACTER_LIMIT
     }
     this.handleAuthorChange = this.handleAuthorChange.bind(this)
     this.handleCommentChange = this.handleCommentChange.bind(this)
-    //this.updateCharsLeft = this.updateCharsLeft.bind(this)
   }
 
   handleAuthorChange(event) {
@@ -24,10 +23,10 @@ class CommentFormContainer extends React.Component {
   handleCommentChange(event) {
     var input = event.target.value
     var length = input.length
-    if (length <= MAX_CHARS) {
+    if (length <= CHARACTER_LIMIT) {
       this.setState({
         comment: event.target.value,
-        charsLeft: MAX_CHARS - length
+        charsLeft: CHARACTER_LIMIT - length
       })
     }
   }
@@ -38,7 +37,7 @@ class CommentFormContainer extends React.Component {
         author={this.state.author}
         comment={this.state.comment}
         charsLeft={this.state.charsLeft}
-        maxChars={MAX_CHARS}
+        charLimit={CHARACTER_LIMIT}
         onAuthorChange={this.handleAuthorChange}
         onCommentChange={this.handleCommentChange}
       />
