@@ -13,7 +13,10 @@ class CommentFormContainer extends React.Component {
 
   render() {
     return (
-      <CommentForm/>
+      <CommentForm
+        author={this.state.author}
+        text={this.state.text}
+      />
     )
   }
 }
