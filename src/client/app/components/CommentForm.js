@@ -1,5 +1,4 @@
 import React from 'react'
-import TextInputFieldContainer from '../containers/TextInputFieldContainer'
 
 // TODO add character count functionality
 const CommentForm = (props) => (
