@@ -5,7 +5,11 @@ function CommentList(props) {
   // Parse comment data into a list of comments to be rendered into a div:
   let commentNodes = props.data.map(function(comment) {
     return (
-      <CommentContainer id={comment.id} author={comment.author}>
+      <CommentContainer
+        id={comment.id}
+        author={comment.author}
+        timestamp={comment.timestamp}
+      >
         {comment.text}
       </CommentContainer>
     )

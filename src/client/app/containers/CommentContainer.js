@@ -8,7 +8,10 @@ class CommentContainer extends React.Component {
 
   render() {
     return (
-      <Comment author={this.props.author}>
+      <Comment
+        author={this.props.author}
+        timestamp={this.props.timestamp}
+      >
         {this.props.children}
       </Comment>
     )
