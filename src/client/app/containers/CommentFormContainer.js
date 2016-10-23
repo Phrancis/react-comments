@@ -1,5 +1,6 @@
 import React from 'react'
 import CommentForm from '../components/CommentForm'
+import comments from '../data/comments'
 
 const CHARACTER_LIMIT = 200
 
@@ -39,10 +40,15 @@ class CommentFormContainer extends React.Component {
     if (!author || !comment) {
       return
     }
-    // TODO send request to be saved
+    comments.push({
+      id: 42,
+      author: this.state.author,
+      text: this.state.comment
+    })
     this.setState({
       author: '',
-      comment: ''
+      comment: '',
+      charsLeft: CHARACTER_LIMIT
     })
   }
 
