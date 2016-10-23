@@ -37,13 +37,15 @@ class CommentFormContainer extends React.Component {
     event.preventDefault()
     var author = this.state.author
     var comment = this.state.comment
+    var timestamp = new Date()
     if (!author || !comment) {
       return
     }
     comments.push({
       id: 42,
       author: this.state.author,
-      text: this.state.comment
+      text: this.state.comment,
+      timestamp: timestamp
     })
     this.setState({
       author: '',

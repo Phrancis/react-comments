@@ -2,7 +2,7 @@ import React from 'react'
 
 const CommentForm = (props) => (
   <form className="commentForm" onSubmit={props.onSubmit}>
-    <h2>Post a comment:</h2>
+    <h3 className="commentFormHeader">Post a comment:</h3>
     <div>
       <label htmlFor="author">Name: </label>
       <input
@@ -24,7 +24,7 @@ const CommentForm = (props) => (
       />
     </div>
     <button type="submit">Post</button>
-    <p>Chars: {props.charsLeft}/{props.charLimit}</p>
+    <p>{props.charsLeft}/{props.charLimit}</p>
   </form>
 )
 CommentForm.defaultProps = {

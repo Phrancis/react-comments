@@ -6,7 +6,6 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <h1>Comments Demo</h1>
         <CommentBox/>
       </div>
 

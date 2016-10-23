@@ -7,16 +7,18 @@ class CommentListContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      data: []
+      data: [],
+      numComments: 0
     }
     this.POLL_INTERVAL = 2000
     this.poll = this.poll.bind(this)
+    this.updateComments = this.updateComments.bind(this)
   }
 
   componentDidMount() {
     this._timer = setInterval(this.poll, this.POLL_INTERVAL)
     if (comments) {
-      this.setState({data: comments})
+      this.updateComments()
     }
   }
 
@@ -27,9 +29,16 @@ class CommentListContainer extends React.Component {
     }
   }
 
+  updateComments() {
+    this.setState({
+      data: comments,
+      numComments: this.state.data.length
+    })
+  }
+
   poll() {
-    if (comments) {
-      this.setState({data: comments})
+    if (comments && comments.length != this.state.numComments) {
+      this.updateComments()
     }
   }
 

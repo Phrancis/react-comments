@@ -62,3 +62,37 @@ p, ul {
 ul {
     padding-left: 30px;
 }
+/*
+Custom CSS below
+*/
+.commentBox {
+    width: 25%;
+    padding: 10px;
+    text-align: left;
+    background: #f8f8f8;
+    border: thin solid darkslategray;
+}
+.commentBoxHeader {
+    font-size: 2em;
+}
+.comment {
+    padding: 4px;
+    border-bottom: 1px solid #ddd;
+}
+.commentText {
+    color: #222222;
+}
+.commentAuthor {
+    color: darkblue;
+}
+.commentTimestamp {
+    color: #888888;
+    font-style: italic;
+}
+.commentForm {
+    border: thin solid #cccccc;
+    padding: 5px;
+}
+.commentFormHeader {
+    font-size: 1.2em;
+}

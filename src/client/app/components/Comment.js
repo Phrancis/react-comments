@@ -2,12 +2,14 @@ import React from 'react'
 
 const Comment = (props) => (
   <div className="comment">
-    <h4 className="commentAuthor">
-      {props.author}
-    </h4>
-    <span>
+    <p className="commentText">
       {props.children}
+    </p>
+    <span className="commentAuthor">
+      - {props.author}
     </span>
+    <span className="commentTimestamp">, posted on {props.timeStamp}</span>
+
   </div>
 )
 
