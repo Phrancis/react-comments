@@ -2,22 +2,19 @@ import React from 'react'
 import CommentList from '../components/CommentList'
 import comments from '../data/comments'
 
-
 class CommentListContainer extends React.Component {
 
   constructor(props) {
     super(props)
     this.state = {
-      data: [],
-      pollInterval: 2000
+      data: []
     }
-    this.loadComments = this.loadComments.bind(this)
-    this.startPolling = this.startPolling.bind(this)
+    this.POLL_INTERVAL = 2000
     this.poll = this.poll.bind(this)
   }
 
   componentDidMount() {
-    this._timer = setInterval(this.poll, this.state.pollInterval)
+    this._timer = setInterval(this.poll, this.POLL_INTERVAL)
     if (comments) {
       this.setState({data: comments})
     }
@@ -31,7 +28,6 @@ class CommentListContainer extends React.Component {
   }
 
   poll() {
-    console.log("Polling" + this._timer)
     if (comments) {
       this.setState({data: comments})
     }
