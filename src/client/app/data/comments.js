@@ -1,8 +1,6 @@
 // TODO find a better way to handle IDs
-// TODO add a new field for the datetime posted
 
 var comments = [
-
   {
     id: 1,
     author: "John Q. Commenter",
@@ -15,10 +13,10 @@ var comments = [
     text: "This is the second comment.",
     timestamp: new Date()
   },
+  /* Test for empty comment */
   {
     id: 3
   }
-
 ]
 
 export default comments

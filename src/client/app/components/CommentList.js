@@ -2,7 +2,7 @@ import React from 'react'
 import CommentContainer from '../containers/CommentContainer'
 
 function CommentList(props) {
-  // Parse comment data into a list of comments to be rendered into a div:
+  // Parse comment data into a list of comments to be rendered:
   let commentNodes = props.data.map(function(comment) {
     return (
       <CommentContainer

@@ -37,7 +37,7 @@ class CommentFormContainer extends React.Component {
     event.preventDefault()
     var author = this.state.author
     var comment = this.state.comment
-    var timestamp = Date.now()
+    var timestamp = new Date()
     if (!author || !comment) {
       return
     }

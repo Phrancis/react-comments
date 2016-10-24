@@ -11,21 +11,21 @@ const Comment = (props) => {
         - {props.author}
       </span>
       <span className="commentTimestamp">
-        , posted on {props.timestamp !== undefined ? formatTimestamp(props.timestamp) : "unknown date"}
+        , posted on {props.timestamp ? formatTimestamp(props.timestamp) : "unknown date"}
       </span>
-
     </div>
   )
 }
 
 Comment.defaultProps = {
-  author: <em>(author unknown)</em>,
+  author:   <em>(author unknown)</em>,
   children: <em>(empty)</em>
 }
 
 Comment.propTypes = {
-  author:   React.PropTypes.string.isRequired,
-  children: React.PropTypes.any.isRequired
+  author:     React.PropTypes.string.isRequired,
+  children:   React.PropTypes.any.isRequired,
+  timestamp:  React.PropTypes.string.isRequired
 }
 
 export default Comment
