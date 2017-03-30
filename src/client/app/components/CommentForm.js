@@ -2,29 +2,36 @@ import React from "react"
 
 const CommentForm = (props) => (
   <form className="commentForm" onSubmit={props.onSubmit}>
-    <h3 className="commentFormHeader">Post a comment:</h3>
+    <h3 className="commentFormHeader">
+      Post a comment:
+    </h3>
     <div>
-      <label htmlFor="author">Name: </label>
-      <input
-        type="text"
-        name="author"
-        placeholder="Your name"
-        value={props.author}
-        onChange={props.onAuthorChange}
-      />
+      <label htmlFor="author">
+        Name:
+      </label>
+      <input type="text"
+             name="author"
+             placeholder="Your name"
+             value={props.author}
+             onChange={props.onAuthorChange}/>
     </div>
     <div>
-      <label htmlFor="comment">Comment: </label>
-      <br />
-      <textarea
-        placeholder="What's on your mind?"
-        name="comment"
-        value={props.comment}
-        onChange={props.onCommentChange}
-      />
+      <label htmlFor="comment">
+        Comment:
+      </label>
+      <p>
+        <textarea placeholder="What's on your mind?"
+                  name="comment"
+                  value={props.comment}
+                  onChange={props.onCommentChange}/>
+      </p>
     </div>
-    <button type="submit">Post</button>
-    <p>{props.charsLeft}/{props.charLimit}</p>
+    <button type="submit">
+      Post
+    </button>
+    <p>
+      {props.charsLeft}/{props.charLimit}
+    </p>
   </form>
 )
 CommentForm.defaultProps = {
@@ -37,8 +44,10 @@ CommentForm.propTypes = {
   author:           React.PropTypes.string.isRequired,
   comment:          React.PropTypes.string.isRequired,
   charsLeft:        React.PropTypes.number.isRequired,
+  charLimit:        React.PropTypes.number.isRequired,
   onAuthorChange:   React.PropTypes.func.isRequired,
-  onCommentChange:  React.PropTypes.func.isRequired
+  onCommentChange:  React.PropTypes.func.isRequired,
+  onSubmit:         React.PropTypes.func.isRequired
 }
 
 export default CommentForm

@@ -1,16 +1,17 @@
 import React from "react"
 import formatTimestamp from "../utils/formatTimestamp"
 
-const Comment = (props) => (
+// TODO the `comment` and `commentAuthor` CSS do not wrap long words with no spaces so they just bleed out of the HTML component
+const Comment = ({author, timestamp, children}) => (
   <div className="comment">
     <p className="commentText">
-      {props.children}
+      {children}
     </p>
     <span className="commentAuthor">
-      - {props.author}
+      - {author}
     </span>
     <span className="commentTimestamp">
-      , posted on {props.timestamp ? formatTimestamp(props.timestamp) : "unknown date"}
+      , posted on {timestamp ? formatTimestamp(timestamp) : "unknown date"}
     </span>
   </div>
 )

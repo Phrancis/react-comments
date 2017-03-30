@@ -10,8 +10,8 @@ const CommentContainer = ({author, timestamp, children}) => (
 
 CommentContainer.propTypes = {
   author:     React.PropTypes.string.isRequired,
-  children:   React.PropTypes.any.isRequired,
-  timestamp:  React.PropTypes.string.isRequired
+  timestamp:  React.PropTypes.string.isRequired,
+  children:   React.PropTypes.any.isRequired
 }
 
 export default CommentContainer

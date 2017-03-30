@@ -2,12 +2,12 @@ import React from "react"
 import CommentListContainer from "../containers/CommentListContainer"
 import CommentFormContainer from "../containers/CommentFormContainer"
 
-const CommentBox = (props) => (
+const CommentBox = ({data}) => (
   <div className="commentBox">
     <h1 className="commentBoxHeader">
       Comments
     </h1>
-    <CommentListContainer data={props.data}/>
+    <CommentListContainer data={data}/>
     <CommentFormContainer />
   </div>
 )

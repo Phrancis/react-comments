@@ -23,8 +23,8 @@ class CommentFormContainer extends React.Component {
   }
 
   handleCommentChange(event) {
-    var input = event.target.value
-    var length = input.length
+    const input = event.target.value
+    const length = input.length
     if (length <= CHARACTER_LIMIT) {
       this.setState({
         comment: input,
@@ -35,17 +35,17 @@ class CommentFormContainer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    let author = this.state.author
-    let comment = this.state.comment
-    let timestamp = new Date()
-    if (!author || !comment) {
+    const author = this.state.author
+    const comment = this.state.comment
+    const timestamp = new Date()
+    if (!author || !comment)
       return
-    }
+
     // TODO generate an actual ID, such as GUID/UUID
     comments.push({
       id: 42,
-      author: this.state.author,
-      text: this.state.comment,
+      author: author,
+      text: comment,
       timestamp: timestamp
     })
     this.setState({
@@ -57,15 +57,13 @@ class CommentFormContainer extends React.Component {
 
   render() {
     return (
-      <CommentForm
-        author={this.state.author}
-        comment={this.state.comment}
-        charsLeft={this.state.charsLeft}
-        charLimit={CHARACTER_LIMIT}
-        onAuthorChange={this.handleAuthorChange}
-        onCommentChange={this.handleCommentChange}
-        onSubmit={this.handleSubmit}
-      />
+      <CommentForm author={this.state.author}
+                   comment={this.state.comment}
+                   charsLeft={this.state.charsLeft}
+                   charLimit={CHARACTER_LIMIT}
+                   onAuthorChange={this.handleAuthorChange}
+                   onCommentChange={this.handleCommentChange}
+                   onSubmit={this.handleSubmit}/>
     )
   }
 }
