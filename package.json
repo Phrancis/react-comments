@@ -11,7 +11,7 @@
   "license": "WTFPL",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Phrancis/react-hello-world.git"
+    "url": "git+https://github.com/Phrancis/react-comments.git"
   },
   "dependencies": {
     "react": "^15.3.2",
@@ -28,7 +28,7 @@
     "webpack": "^1.13.2"
   },
   "bugs": {
-    "url": "https://github.com/Phrancis/react-hello-world/issues"
+    "url": "https://github.com/Phrancis/react-comments/issues"
   },
-  "homepage": "https://github.com/Phrancis/react-hello-world#readme"
+  "homepage": "https://github.com/Phrancis/react-comments#readme"
 }
