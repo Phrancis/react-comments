@@ -1,6 +1,6 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import CommentBox from './containers/CommentBoxContainer'
+import React from "react"
+import ReactDOM from "react-dom"
+import CommentBox from "./containers/CommentBoxContainer"
 
 class App extends React.Component {
   render() {
@@ -15,5 +15,5 @@ class App extends React.Component {
 
 ReactDOM.render(
   <App/>,
-  document.getElementById('app')
+  document.getElementById("app")
 )

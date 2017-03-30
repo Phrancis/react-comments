@@ -1,4 +1,4 @@
-function formatTimestamp(timestamp) {
+const formatTimestamp = (timestamp) => {
   var options = {
     weekday: "long",
     year: "numeric",

@@ -1,6 +1,6 @@
-import React from 'react'
-import CommentList from '../components/CommentList'
-import comments from '../data/comments'
+import React from "react"
+import CommentList from "../components/CommentList"
+import comments from "../data/comments"
 
 class CommentListContainer extends React.Component {
 
@@ -11,8 +11,8 @@ class CommentListContainer extends React.Component {
       numComments: 0
     }
     this.POLL_INTERVAL = 2000
-    this.poll = this.poll.bind(this)
     this.updateComments = this.updateComments.bind(this)
+    this.poll = this.poll.bind(this)
   }
 
   componentDidMount() {

@@ -1,6 +1,6 @@
-import React from 'react'
-import CommentForm from '../components/CommentForm'
-import comments from '../data/comments'
+import React from "react"
+import CommentForm from "../components/CommentForm"
+import comments from "../data/comments"
 
 const CHARACTER_LIMIT = 200
 
@@ -9,8 +9,8 @@ class CommentFormContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      author: '',
-      comment: '',
+      author: "",
+      comment: "",
       charsLeft: CHARACTER_LIMIT
     }
     this.handleAuthorChange = this.handleAuthorChange.bind(this)
@@ -35,12 +35,13 @@ class CommentFormContainer extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault()
-    var author = this.state.author
-    var comment = this.state.comment
-    var timestamp = new Date()
+    let author = this.state.author
+    let comment = this.state.comment
+    let timestamp = new Date()
     if (!author || !comment) {
       return
     }
+    // TODO generate an actual ID, such as GUID/UUID
     comments.push({
       id: 42,
       author: this.state.author,
@@ -48,8 +49,8 @@ class CommentFormContainer extends React.Component {
       timestamp: timestamp
     })
     this.setState({
-      author: '',
-      comment: '',
+      author: "",
+      comment: "",
       charsLeft: CHARACTER_LIMIT
     })
   }

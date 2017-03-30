@@ -1,7 +1,7 @@
-import React from 'react'
-import CommentContainer from '../containers/CommentContainer'
+import React from "react"
+import CommentContainer from "../containers/CommentContainer"
 
-function CommentList(props) {
+const CommentList = (props) => {
   // Parse comment data into a list of comments to be rendered:
   let commentNodes = props.data.map(function(comment) {
     return (
@@ -19,6 +19,10 @@ function CommentList(props) {
       {commentNodes}
     </div>
   )
+}
+
+CommentList.propTypes = {
+  data: React.PropTypes.array
 }
 
 export default CommentList

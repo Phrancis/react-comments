@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const CommentForm = (props) => (
   <form className="commentForm" onSubmit={props.onSubmit}>
@@ -28,17 +28,17 @@ const CommentForm = (props) => (
   </form>
 )
 CommentForm.defaultProps = {
-  author: '',
-  comment: '',
+  author: "",
+  comment: "",
   charsLeft: 0,
   charLimit: 0
 }
 CommentForm.propTypes = {
-  author: React.PropTypes.string.isRequired,
-  comment: React.PropTypes.string.isRequired,
-  charsLeft: React.PropTypes.number.isRequired,
-  onAuthorChange: React.PropTypes.func.isRequired,
-  onCommentChange: React.PropTypes.func.isRequired
+  author:           React.PropTypes.string.isRequired,
+  comment:          React.PropTypes.string.isRequired,
+  charsLeft:        React.PropTypes.number.isRequired,
+  onAuthorChange:   React.PropTypes.func.isRequired,
+  onCommentChange:  React.PropTypes.func.isRequired
 }
 
 export default CommentForm
