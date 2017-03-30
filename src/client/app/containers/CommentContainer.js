@@ -1,21 +1,17 @@
 import React from "react"
 import Comment from "../components/Comment"
 
-class CommentContainer extends React.Component {
-  constructor(props) {
-    super(props)
-  }
+const CommentContainer = ({author, timestamp, children}) => (
+  <Comment author={author}
+           timestamp={timestamp}>
+    {children}
+  </Comment>
+)
 
-  render() {
-    return (
-      <Comment
-        author={this.props.author}
-        timestamp={this.props.timestamp}
-      >
-        {this.props.children}
-      </Comment>
-    )
-  }
+CommentContainer.propTypes = {
+  author:     React.PropTypes.string.isRequired,
+  children:   React.PropTypes.any.isRequired,
+  timestamp:  React.PropTypes.string.isRequired
 }
 
 export default CommentContainer

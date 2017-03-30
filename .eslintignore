@@ -1,0 +1,3 @@
+*.html
+*.css
+/src/client/public/bundle.js

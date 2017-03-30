@@ -13,7 +13,7 @@ const CommentBox = (props) => (
 )
 
 CommentBox.propTypes = {
-  data: React.PropTypes.object.isRequired
+  data: React.PropTypes.object
 }
 
 export default CommentBox
